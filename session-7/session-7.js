@@ -11,9 +11,14 @@ tinhTong = () => {
 
 	arrSoNguyen = [parseInt(soNguyen1, 20), parseInt(soNguyen2, 20), parseInt(soNguyen3, 20)];
 	var sum = 0;
-	for(var i = 0; i < arrSoNguyen.length; i++){
-		sum += arrSoNguyen[i];
-	}
+
+	arrSoNguyen.forEach((value) => {
+		sum += value;
+	})
+
+	// for(var i = 0; i < arrSoNguyen.length; i++){
+	// 	sum += arrSoNguyen[i];
+	// }
 
 	var displaySum = document.getElementById("sum").innerHTML = "Tổng các số nguyên là: " + sum;
 	document.getElementById("sum").style.color = 'red';
